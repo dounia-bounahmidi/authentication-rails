@@ -1,0 +1,231 @@
+// Place all the styles related to the Lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Dashboard - Lists Index page */ 
+
+html, body {
+	padding: 0; 
+	margin: 0; 
+	background: #FFF; 
+	font-family: 'Lato', sans-serif;
+	overflow-y: hidden; 
+}
+
+a {
+	text-decoration: none; 
+	color: black; 
+}
+
+#notice {
+	padding-top: 3.5%; 
+	padding-left: 40%; 
+	color: #B5894A; 
+	font-weight: 300; 
+	font-size: 25px; 
+	font-style: italic; 
+	text-decoration: underline; 
+}
+
+.lists {
+	width: 100%; 
+	height: 400px; 
+	padding: 2% 0 0 0; 
+	overflow-y: scroll; 
+}
+
+.list-title {
+	width: 55%; 
+	height: 30px; 
+	margin: 1% auto;  
+	position: relative;  
+	padding: 10px; 
+	border: 0.5px solid #B5894A; 
+	cursor: pointer; 
+}
+
+.list-title img {
+	width: 15px; 
+	height: 15px; 
+	margin: 5px; 
+	float: right; 
+	cursor: pointer; 
+}
+
+.new img {
+	width: 30px; 
+	height: 30px; 
+}
+
+
+.new-list, .new-task {
+	margin: auto; 
+	height: 100px; 
+	text-align: center; 
+}
+
+.new-list input, .new-task input {
+	width: 350px; 
+}
+
+.new-list input, .new-task input {
+	height: 30px; 
+	border: 0.5px solid #B5894A; 
+	padding-left: 10px; 
+	font-size: 14px; 
+	font-family: 'Lato', sans-serif; 
+	font-weight: 300; 
+	margin: 5% auto;  
+}
+
+.new-list input:focus, .new-task input:focus {
+	outline: transparent; 
+}
+
+::-webkit-input-placeholder {
+	font-size: 17px; 
+	font-family: 'Lato', sans-serif; 
+	font-weight: 300; 
+}
+
+::-moz-placeholder {
+	font-size: 17px; 
+	font-family: 'Lato', sans-serif;  
+	font-weight: 300; 
+}
+
+:-moz-placeholder {
+    font-size: 17px; 
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; 
+}
+
+#submit-new {
+	width: 80px; 
+	height: 34px; 
+	background: black; 
+	opacity: 0.9; 
+	color: #B5894A; 
+	border: none; 
+	cursor: pointer; 
+	font-size: 14px; 
+}
+
+#submit-new:hover {
+	font-weight: bold; 
+	opacity: 1; 
+}
+
+.empty {
+	width: 100%; 
+	height: auto; 
+	text-align: center;
+}
+
+.empty p {
+	color: #ADADAD; 
+	margin: 5% auto; 
+	font-size: 50px; 
+	font-weight: 300; 
+	font-style: italic; 
+}
+
+#date {
+	font-size: 11px; 
+	color: #B5894A; 
+	margin-top: 2px; 
+}
+
+.wrapper-new {
+	height: 600px; 
+}
+
+/* Dashboard - Tasks page */ 
+
+.tasks-wrapper {
+	width: 100%; 
+	height: 500px;  
+	padding-bottom: 2%; 
+	text-align: center; 
+}
+
+.root {
+	width: 100%; 
+	height: 100px; 
+	padding-left: 3%; 
+	margin-top: -25px; 
+}
+
+.root h1 {
+	font-family: Georgia; 
+	float: left;
+	font-size: 40px; 
+	font-weight: 20; 
+	letter-spacing: 1.5px; 
+}
+
+.root span {
+	font-size: 50px; 
+}
+
+.page-header p {
+	font-size: 30px; 
+	color: #B5894A; 
+}
+
+.tasks-container {
+	height: 300px; 
+	overflow-y: scroll; 
+}
+
+.tasks {
+	width: 45%; 
+	height: 30px; 
+	border: 0.5px solid #B5894A;
+	margin: 15px auto; 
+	text-align: left; 
+	padding: 5px 10px; 
+	cursor: pointer; 
+}
+
+.tasks p { 
+	display: inline; 
+}
+
+.tasks img {
+	width: 15px; 
+	height: 15px; 
+	display: inline; 
+	margin: 5px; 
+	float: right; 
+}
+
+#task-input {
+	margin-right: 20px; 
+}
+
+#still-empty {
+	color: #ADADAD; 
+	margin: 9% auto; 
+	font-size: 50px; 
+	font-weight: 300; 
+	font-style: italic;
+}
+
+.completed {
+	background: #E0E0E0; 
+	border: 0.5px solid #ADADAD;
+}
+
+#done, .completed-at {
+	color: black; 
+	font-weight: bold; 
+	font-style: italic;
+}
+
+.completed-at {
+	font-size: 12px; 
+	color: black; 
+}
+
+

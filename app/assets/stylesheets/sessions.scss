@@ -1,0 +1,89 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Log in page */ 
+
+.login {
+	width: 100%; 
+	height: 300px; 
+	text-align: center; 
+	margin: 100px auto 50px auto; 
+}
+
+.login form {
+	width: 300px; 
+	height: 320px; 
+	margin: auto; 
+	background: #B5894A; 
+	padding: 10px; 
+}
+
+.login form input {
+	width: 200px; 
+	height: 30px; 
+	margin-bottom: 15px; 
+	border: none; 
+	padding-left: 10px; 
+	font-size: 18px; 
+	font-weight: lighter; 
+	font-family: 'Lato', sans-serif;
+}
+
+.login form input:focus {
+	outline: transparent; 
+	border: 2px solid black; 
+}
+
+.submit-login {
+	width: 300px; 
+	text-align: center; 
+}
+
+#btn-login {
+	width: 140px; 
+	height: 40px; 
+	border: none; 
+	background: black;
+	margin: 10px auto;  
+	color: #B5894A; 
+	cursor: pointer; 
+	opacity: 0.9; 
+	font-size: 13px;
+}
+
+#btn-login:hover {
+	opacity: 1; 
+	font-weight: bold; 
+}
+
+#title {
+	padding-top: 15px; 
+	padding-bottom: 15px; 
+}
+
+#signuplogin { 
+	color: black; 
+	opacity: 0.9; 
+}
+
+#bridge a {
+	text-indent: 5px; 
+	color: black; 
+	opacity: 0.9;
+}
+
+#bridge a:hover {
+	opacity: 1; 
+}
+
+
+
+
+
+
+
+
+
+
+

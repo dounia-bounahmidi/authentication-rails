@@ -1,0 +1,34 @@
+<%= link_to("dashboard") do %>
+	<div class="header">
+      	<h1><span>L</span>ist<span id="color"><span>U<span>p</span></h1>
+      	<p id="notice"><%= notice %></p>
+	</div>
+<% end %>
+
+		<div class="new-list">
+			<%= form_for(@list) do |f| %>
+				<%= f.text_field :title, :placeholder => 'List title' %>
+				<%= f.submit "Create list", :id => 'submit-new' %> 
+			<% end %> 
+	</div> 
+
+	<div class="lists">
+	<% if @lists.length > 0 %> 	
+		<% @lists.each do |list| %>
+		<%= link_to list_path(list) do %>  
+			<div class="list-title">
+				<div class="body">
+					<%= list.title %>
+					<%= link_to list_path(list), method: "delete" do %> <%= image_tag 'cross.png', :id => 'delete' %> <% end %> 
+				</div>
+				<p id ="date">Created at: <%= list.created_at.strftime('%b %d') %>, <%= list.created_at.strftime('%Y') %></p>
+				</div>
+				<% end %> 
+			<% end %> 
+	<% else %> 
+	 <div class="empty">
+	 	<p><%= "You haven't created any lists yet" %></p> 
+	 </div>
+	<% end %> 
+</div> 
+</div>

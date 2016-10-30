@@ -1,0 +1,4 @@
+<%= form_for([@list, @list.tasks.build]) do |f| %>
+	<%= f.text_field :description, placeholder: "Add a task" %>
+	<%= f.submit %>
+<% end %>

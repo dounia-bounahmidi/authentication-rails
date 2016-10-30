@@ -1,0 +1,18 @@
+<div class="header">
+	<%= link_to("welcome") do %>
+      <h1><span>L</span>ist<span id="color"><span>U<span>p</span></h1>
+    <% end %> 
+</div>
+
+<div class="login">
+	<%= form_for(:session, url: login_path) do |f| %>
+		<p id="title">Login to your account</p>
+		<p id="error"><%= notice %></p>
+		<%= f.email_field :email, :placeholder => "Email" %>
+		<%= f. password_field :password, :placeholder => "Password" %>
+		<div class="submit-login">
+			<%= f.submit "Login", :id => "btn-login" %> 
+		</div>
+		<p id="bridge">New to ListUp? <%= link_to "Sign up", "signup" %></p>
+	<% end %>
+</div>

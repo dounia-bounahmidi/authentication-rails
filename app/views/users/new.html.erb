@@ -1,0 +1,21 @@
+<div class="header">
+	<%= link_to("welcome") do %>
+      <h1><span>L</span>ist<span id="color"><span>U<span>p</span></h1>
+    <% end %> 
+</div>
+
+<div class="signup">
+	<%= form_for(@user) do |f| %>
+		<p>First name<span>&#42;</span></p>
+		<%= f.text_field :first_name, :placeholder => "First name", required: true %>
+		<p>Last name<span>&#42;</span></p>
+		<%= f.text_field :last_name, :placeholder => "Last name", required: true %>
+		<p>Email<span>&#42;</span></p>
+		<%= f.email_field :email, :placeholder => "Email", required: true %>
+		<p>Password<span>&#42;</span></p>
+		<%= f. password_field :password, :placeholder => "Password", required: true %>
+		<div class="submit">
+		<%= f.submit "Create free account", :id => "btn-submit" %> 
+		</div>
+	<% end %>
+</div>

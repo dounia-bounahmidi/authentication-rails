@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ListUp</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,400,900" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="nav">
+    <% if current_user %>
+      <ul>
+        <li id="welcome-user">Welcome, <%= current_user.first_name %>! </li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      </ul>
+    <% else %> 
+      <ul>
+        <li> <%= link_to "Log in", "/login" %> </li>
+        <li> <%= link_to "Signup", "/signup" %> </li>
+      </ul> 
+    <% end %>
+  </div>
+    
+    <%= yield %>
+
+    <div class="footer">
+      <p>&copy; 2016 ListUp</p>
+    </div>
+
+  </body>
+</html>

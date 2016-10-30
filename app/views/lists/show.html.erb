@@ -1,0 +1,44 @@
+<%= link_to("/dashboard") do %>
+	<div class="root">
+      	<h1><span>L</span>ist<span id="color"><span>U<span>p</span></h1>
+      	<p id="notice"><%= notice %></p>
+	</div>
+<% end %>
+
+<div class="tasks-wrapper">
+
+	<div class="page-header">
+		<p><%= @list.title %></p> 
+	</div>
+
+<div class="tasks-container">
+	<% if @list.tasks.length > 0 %>
+		<% @list.tasks.each do |task| %> 
+			<% if task.completed? %> 
+			<div class="tasks completed">
+				<p id="done"><%= task.description %></p>
+				<%= link_to [task.list, task], method: "delete" do %> <%= image_tag "cross.png" %> <% end %> 
+				<div class="completed-at"> Completed at: <%= task.completed_at.strftime("%b %d") %>, <%= task.completed_at.strftime("%Y") %> </div> 
+			</div>
+			<% else %> 
+				<div class="tasks">
+				<p><%= task.description %></p> 
+				<%= link_to [task.list, task], method: "delete" do %> <%= image_tag "cross.png" %> <% end %> 
+				<%= link_to complete_list_task_path(@list, task.id), method: :patch do %> <%= image_tag "checked.png" %> <% end %> 
+			</div>
+			<% end %> 
+		<% end %> 
+	<% else %> 
+		<p id="still-empty">This list is empty</p>
+	<% end %> 
+</div>
+	
+
+	<div class="new-task">
+		<%= form_for([@list, @list.tasks.build]) do |f| %> 
+			<%= f.text_field :description, :placeholder => 'Add tasks to your list', :id => "task-input" %>
+			<%= f.submit "Add", :id => 'submit-new' %> 
+		<% end %> 
+	</div>
+</div> 
+
