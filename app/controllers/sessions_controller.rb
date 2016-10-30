@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     	@user = User.find_by_email(params[:session] [:email])
     	if @user && @user.authenticate(params[:session] [:password])
     		session[:user_id] = @user.id 
-    		redirect_to '/'
+    		redirect_to '/dashboard'
     	else 
     		flash[:notice] = 'There was a problem with your login.'
     		redirect_to 'login'

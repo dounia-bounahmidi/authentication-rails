@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       NewUserMailer.welcome_user(@user).deliver 
       session[:user_id] = @user.id 
       flash[:notice] = 'Successfully signed up' 
-      redirect_to login_path 
+      redirect_to '/login' 
     else 
       redirect_to '/signup'
     end 
