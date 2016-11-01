@@ -8,11 +8,11 @@ class UsersController < ApplicationController
 
 	 def create 
     @user = User.new(user_params)
-    if @user.save 
-      NewUserMailer.welcome_user(@user).deliver 
+    if @user.save  
+      NewUserMailer.welcome_user(@user).deliver
       session[:user_id] = @user.id 
       flash[:notice] = 'Successfully signed up' 
-      redirect_to '/login' 
+      redirect_to 'login' 
     else 
       redirect_to '/signup'
     end 
